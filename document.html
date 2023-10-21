@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Skele Electric</title>
+        <link rel="shortcut icon" href="Tlogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel ="stylesheet" media="screen and (min-width: 1000px)" href="css/style.css">
+    <link rel ="stylesheet" media="screen and (max-width: 999px)" href="css/moblie.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <div class="navbar">
+      <img src="Tlogo.png" width="40px" height="40px" style="cursor: pointer;" onclick="window.location.href ='index.html'">
+        <button class="phone-cd" id="btns">菜单</button>
+        <div class="pc-tj"></div>
+        <a href="index.html">回到首页</a>
+        <a href="gongao.html">公告</a>
+        <a href="404.html">成员个人页</a>
+    </div>
+    <div class="phone-link"  id="phone">
+        <a href="index.html">回到首页</a>
+        <a href="gongao.html">公告</a>
+        <a href="404.html">成员个人页</a>
+    </div>
+    <div class="text-cen">
+        <h1 style="font-size: 3em;">项目</h1>
+            <div class="item" onclick="toggleAccordion(1)">
+              <h3><i class="fa fa-html5"></i> Skele Electric 主站</h3>
+              <br>
+              <div class="tre">
+                <p>Skele Electric的主首页，目前还处于制作设计阶段</p>
+                <p>负责人：藏獒</p>
+                <p>项目进度：<div class="pagepmr"><div class="pagepmr-jd" style="width: 3%;"></div></div>3%</p>
+            </div>
+            </div>
+            
+            <div class="item" onclick="toggleAccordion(2)">
+              <h3><i class="fa fa-html5"></i> Skele Electric精简站</h3>
+              <br>
+              <div class="tre"><p>Skele Electric的精简版，具有空间小，前端代码含量低的特征，本站保存在Github中</p>
+                <p>负责人：藏獒</p>
+              <p>项目进度：<div class="pagepmr"><div class="pagepmr-jd" style="width: 100%;"></div></div>100%</p>
+            </div>
+            </div>
+            
+            <div class="item" onclick="toggleAccordion(3)">
+              <h3><i class="fa fa-css3"></i> 深空的前端CSS库</h3>
+              <br>
+              <div class="tre">
+                <p>深空组的通用CSS库：目前项目摆烂</p>
+                <p>负责人：藏獒</p>
+                <p>项目进度：<div class="pagepmr"><div class="pagepmr-jd" style="width: 3%;"></div></div>3%</p>
+            </div>
+            </div>
+            <div class="item" onclick="toggleAccordion(4)">
+              <h3><i class="fa fa-html5"></i> chiploop</h3>
+              <br>
+              <div class="tre">
+                <p>作者还没给简介</p>
+                <p>负责人：焮文</p>
+                <p>项目进度：<div class="pagepmr"><div class="pagepmr-jd" style="width: 100%;"></div></div>100%</p>
+            </div>
+          </div>
+          <div class="item" onclick="toggleAccordion(5)">
+            <h3><i class="fa fa-gears"></i> bq4050技术预先评估板</h3>
+            <br>
+            <div class="tre">
+              <p>版号：SK231015112304</p>
+              <p>负责人：明阳</p>
+              <p>项目进度：<div class="pagepmr"><div class="pagepmr-jd" style="width: 70%;"></div></div>70%</p>
+          </div>
+          </div>
+          
+          </div>
+        </div>
+        
+    </div>
+</body>
+</html>
+<script>
+    let box = document.getElementById('phone');
+    let btn = document.getElementById('btns');
+    btn.onclick = function() {
+        if(box.style.left == '-800px'){
+            box.style.left = '0px';
+        }else{
+            box.style.left = '-800px';
+        }
+    }
+    document.onclick = function(e){
+                if(e.target != box && e.target != btn){
+                    box.style.left = '-800px';
+                }
+            }
+            //---------------------------------------
+            var activeItem = null;
+    
+    function toggleAccordion(index) {
+      var item = document.getElementsByClassName("item")[index - 1];
+    
+      if (activeItem === item) {
+        item.classList.remove("active");
+        activeItem = null;
+      } else {
+        if (activeItem !== null) {
+          activeItem.classList.remove("active");
+        }
+        item.classList.add("active");
+        activeItem = item;
+      }
+    }
+</script>

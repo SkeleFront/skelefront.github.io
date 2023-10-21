@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Skele Electric</title>
+        <link rel="shortcut icon" href="Tlogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel ="stylesheet" media="screen and (min-width: 1000px)" href="css/style.css">
+    <link rel ="stylesheet" media="screen and (max-width: 999px)" href="css/moblie.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <!--栏-->
+    <div class="navbar">
+        <img src="Tlogo.png" width="40px" height="40px" style="cursor: pointer;" onclick="window.location.href ='index.html'">
+        <button class="phone-cd" id="btns">菜单</button>
+        <div class="pc-tj"></div>
+        <a href="gongao.html">公告</a>
+        <a href="document.html">项目</a>
+        <a href="404.html">成员个人页</a>
+    </div>
+    <div class="phone-link" id="phone">
+        <a href="gongao.html">公告</a>
+        <a href="document.html">项目</a>
+        <a href="404.html">成员个人页</a>
+    </div>
+    <!--文字栏-->
+    <div class="hez"></div>
+    <div class="yuen"></div>
+    <div class="text-cen">
+        <div class="samr">
+    <h1 style="font-size: 5em;text-align: center;">Skele Electric</h1>
+    <p style="font-size: 3em;text-align: center;">科技创新 引领未来</p>
+</div>
+    <div class="ske">
+    <h2 style="font-size: 2.6em;">我们</h2>
+    <p style="font-size: 1.4em;">一个研究电子设备、PC、开发的集体,有秩序,有实力,有创新</p>
+    <p style="font-size: 1.4em;">这里活跃，接纳每一个爱好电脑的人</p>
+    </div>
+    <i style="position: fixed;bottom:0;">设计师爱偷懒,懒得写动画</i>
+</div>
+</body>
+</html>
+<script>
+    let box = document.getElementById('phone');
+    let btn = document.getElementById('btns');
+    btn.onclick = function() {
+        if(box.style.left == '-800px'){
+            box.style.left = '0px';
+        }else{
+            box.style.left = '-800px';
+        }
+    }
+    document.onclick = function(e){
+                if(e.target != box && e.target != btn){
+                    box.style.left = '-800px';
+                }
+            }
+            //-------------------------------
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Skele Electric</title>
+        <link rel="shortcut icon" href="Tlogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel ="stylesheet" media="screen and (min-width: 1000px)" href="css/style.css">
+    <link rel ="stylesheet" media="screen and (max-width: 999px)" href="css/moblie.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <div class="navbar">
+        <h2 onclick="window.location.href='index.html'" style="cursor: pointer;">Skele Electric</h2>
+        <button class="phone-cd" id="btns">菜单</button>
+        <a href="index.html" class="pcn">回到首页</a>
+        <a href="gongao.html" class="pcn">公告</a>
+        <a href="document.html" class="pcn">项目</a>
+    </div>
+    <div class="phone-link" id="phone">
+        <a href="index.html">回到首页</a>
+        <a href="gongao.html">公告</a>
+        <a href="document.html">项目</a>
+    </div>
+    <div class="text-cen">
+        <h1 style="font-size: 3em;">加入我们</h1>
+        <h2>须知</h2>
+        <ul>
+            <li>加入小组需要通过验证</li>
+            <li>入组成功后请阅读深空管理条例</li>
+            <li>小组内公告具有些不可开源项目，不允许转发，除非要求可开源</li>
+            <li>申请服务器需要通过组长同意，参照服务器管理条例</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    //下滑菜单
+    let box = document.getElementById('phone');
+    let btn = document.getElementById('btns');
+    btn.onclick = function() {
+        if(box.style.left == '-800px'){
+            box.style.left = '0px';
+        }else{
+            box.style.left = '-800px';
+        }
+    }
+    document.onclick = function(e){
+                if(e.target != box && e.target != btn){
+                    box.style.left = '-800px';
+                }
+            }
+    //----------------------------------------
+    
+</script>

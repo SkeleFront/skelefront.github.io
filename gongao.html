@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Skele Electric</title>
+        <link rel="shortcut icon" href="Tlogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel ="stylesheet" media="screen and (min-width: 1000px)" href="css/style.css">
+    <link rel ="stylesheet" media="screen and (max-width: 999px)" href="css/moblie.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="Tlogo.png" width="40px" height="40px" style="cursor: pointer;" onclick="window.location.href ='index.html'">
+        <button class="phone-cd" id="btns">菜单</button>
+        <div class="pc-tj"></div>
+        <a href="index.html">回到首页</a>
+        <a href="document.html">项目</a>
+        <a href="404.html">成员个人页</a>
+    </div>
+    <div class="phone-link"  id="phone">
+        <a href="index.html">回到首页</a>
+        <a href="document.html">项目</a>
+        <a href="404.html">成员个人页</a>
+    </div>
+    <div class="text-cen">
+        <h1 style="font-size: 3em;text-align: center;">更新公告</h1>
+        <!----------------------公告内容------------------------->
+        <div class="ggs">
+            <h3 style="font-size: 1.4em;">Skele Electric精简站设计完成</h3>
+            <p>发布人：藏獒</p>
+            <p>时间：2023-8-29</p>
+            <ul>
+                <li>本页舍去大量字体包、图片与杂乱的装饰</li>
+                <li>本页相对原页面体积更小，访问加载稍快</li>
+                <li>本页将永久存在</li>
+                <li>页面保存至GitHub，且使用Github pages</li>
+            </ul>
+        </div>
+        <div class="ggs">
+            <h3 style="font-size: 1.4em;">Skele Electric精简站小更新</h3>
+            <p>发布人：藏獒</p>
+            <p>时间：2023-9-29</p>
+            <ul>
+                <li>删除敏感页面</li>
+                <li>项目查看增加点击事件，可展示项目的说明与项目完成进度</li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="ggs">
+            <h3 style="font-size: 1.4em;">Skele Electric精简站小更新</h3>
+            <p>发布人：藏獒</p>
+            <p>时间：2023-10-3</p>
+            <ul>
+                <li>添加新的页面，用于展示成员的个人网站</li>
+                <li>删除加入页面</li>
+                <li>优化手机版转页面后，保持全屏状态</li>
+            </ul>
+        </div>
+        <div class="ggs">
+            <h3 style="font-size: 1.4em;">Skele Electric精简站小更新</h3>
+            <p>发布人：藏獒</p>
+            <p>时间：2023-10-15</p>
+            <ul>
+                <li>修改了页面整体背景</li>
+                <li>修改菜单栏风格</li>
+            </ul>
+        </div>
+        <div class="ggs">
+            <h3 style="font-size: 1.4em;">Skele Electric精简站小更新</h3>
+            <p>发布人：藏獒</p>
+            <p>时间：2023-10-21</p>
+            <ul>
+                <li>正在重构成员个人页，届时无法查看</li>
+                <li>修改了主页样式</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let box = document.getElementById('phone');
+    let btn = document.getElementById('btns');
+    btn.onclick = function() {
+        if(box.style.left == '-800px'){
+            box.style.left = '0px';
+        }else{
+            box.style.left = '-800px';
+        }
+    }
+    document.onclick = function(e){
+                if(e.target != box && e.target != btn){
+                    box.style.left = '-800px';
+                }
+            }
+</script>
